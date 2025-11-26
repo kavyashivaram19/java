@@ -1,16 +1,22 @@
-package CIE;
-public class Personal
-{
-    public String usn,name;
+package cie;
+import java.util.Scanner;
+public class Personal {
+    public String usn, name;
     public int sem;
-    public Personal(String usn,String name,int sem)
-    {
-        this.usn=usn;
-        this.name=name;
-        this.sem=sem;
+
+    public void read() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter USN: ");
+        usn = sc.nextLine();
+        System.out.print("Enter Name: ");
+        name = sc.nextLine();
+        System.out.print("Enter Semester: ");
+        sem = sc.nextInt();
     }
-    public void display()
-    {
-        System.out.println("USN:"+usn+""+"name:"+name+" "+"sem:"+sem);
+
+    public void display() {
+        System.out.println("USN: " + usn);
+        System.out.println("Name: " + name);
+        System.out.println("Semester: " + sem);
     }
 }
