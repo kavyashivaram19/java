@@ -1,0 +1,28 @@
+import CIE.*;
+import SEE.*;
+import java.util.Scanner;
+
+class FinalMarks {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of students: ");
+        int n = sc.nextInt();
+
+        for(int i = 0; i < n; i++) {
+            Personal p = new Personal();
+            Internals in = new Internals();
+            External e = new External();
+
+            p.per();
+            in.internals();
+            e.ext();
+
+            System.out.println("Final Marks:");
+            for(int j = 0; j < 5; j++) {
+                int finalm = in.intmarks[j] + e.extmarks[j];
+                System.out.println("Subject " + (j+1) + ": " + finalm);
+            }
+        }
+    }
+}
